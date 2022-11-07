@@ -34,4 +34,4 @@ const path = {
    }
 };
 
-export { path };
+export { path, srcFolder, buildFolder };
