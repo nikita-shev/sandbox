@@ -2,7 +2,7 @@ import { buildFolder } from '../settings.js';
 import { deleteSync } from 'del';
 
 const deleteFiles = (cb) => {
-   deleteSync([`${buildFolder}/**/*.*`, `!${buildFolder}/fonts`, `!${buildFolder}/fonts/**/*.*`]);
+   deleteSync([`${buildFolder}/**/*`, `!${buildFolder}/fonts`, `!${buildFolder}/fonts/**/*.*`]);
    cb();
 };
 
