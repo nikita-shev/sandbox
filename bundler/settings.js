@@ -13,6 +13,7 @@ const path = {
       watch: `${srcFolder}/styles/**/*.+(scss|sass)`
    },
    js: {
+      build: `build/js/`,
       public: `${buildFolder}/js/`,
       src: `${srcFolder}/js/main.js`,
       watch: `${srcFolder}/js/**/*.js`
