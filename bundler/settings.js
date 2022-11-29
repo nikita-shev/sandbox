@@ -29,9 +29,10 @@ const path = {
       watch: `${srcFolder}/images/icons/**/*.svg`
    },
    fonts: {
-      public: `${buildFolder}/fonts/`,
-      src: `${srcFolder}/fonts/**/*.ttf`,
-      watch: `${srcFolder}/fonts/**/*.ttf`
+      build: 'build/fonts',
+      public: `public/fonts`,
+      src: `src/fonts`,
+      watch: `src/fonts/**/*.ttf`
    }
 };
 

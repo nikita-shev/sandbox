@@ -5,6 +5,7 @@ import configureHtmlFiles from './bundler/tasks/html.js';
 import configureStyleFiles from './bundler/tasks/css.js';
 import js from './bundler/tasks/JavaScript.js';
 import images from './bundler/tasks/Images.js';
+import { convertTtf2Woff, convertTtf2Woff2, setFontFaceMixin } from './bundler/tasks/fonts.js';
 
 const { series, parallel } = gulp;
 const { configureJsFiles } = js;
@@ -18,7 +19,10 @@ export default series(
       configureJsFiles,
       convertToWebp,
       optimizeImages,
-      createSvgSprite
+      createSvgSprite,
+      convertTtf2Woff,
+      convertTtf2Woff2,
+      setFontFaceMixin
    ),
    parallel(startServer)
 );
