@@ -5,7 +5,7 @@ import configureHtmlFiles from './bundler/tasks/html.js';
 import configureStyleFiles from './bundler/tasks/css.js';
 import js from './bundler/tasks/JavaScript.js';
 import images from './bundler/tasks/Images.js';
-import { convertTtf2Woff, convertTtf2Woff2, setFontFaceMixin } from './bundler/tasks/fonts.js';
+import { convertTtf2Woff, convertTtf2Woff2, setFontFaceMixin } from './bundler/tasks/Fonts.js';
 
 const { series, parallel } = gulp;
 const { configureJsFiles } = js;
