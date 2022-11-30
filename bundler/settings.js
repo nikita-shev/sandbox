@@ -1,39 +1,38 @@
-const srcFolder = 'src';
-const buildFolder = 'public';
+const { _src, _serve, _build } = { _src: 'src', _serve: 'public', _build: 'build' }; // folders
 
 const path = {
    html: {
-      public: `${buildFolder}/`,
-      src: [`${srcFolder}/**/*.html`, `!${srcFolder}/**/_*.html`],
-      watch: `${srcFolder}/**/*.html`
+      public: `${_serve}/`,
+      src: [`${_src}/**/*.html`, `!${_src}/**/_*.html`],
+      watch: `${_src}/**/*.html`
    },
    css: {
-      public: `${buildFolder}/css/`,
-      src: `${srcFolder}/styles/main.sass`,
-      watch: `${srcFolder}/styles/**/*.+(scss|sass)`
+      public: `${_serve}/css/`,
+      src: `${_src}/styles/main.sass`,
+      watch: `${_src}/styles/**/*.+(scss|sass)`
    },
    js: {
-      build: `build/js/`,
-      public: `${buildFolder}/js/`,
-      src: `${srcFolder}/js/main.js`,
-      watch: `${srcFolder}/js/**/*.js`
+      build: `${_build}/js/`,
+      public: `${_serve}/js/`,
+      src: `${_src}/js/main.js`,
+      watch: `${_src}/js/**/*.js`
    },
    images: {
-      public: `${buildFolder}/images/`,
-      src: `${srcFolder}/images/**/*.+(png|jpg|gif|ico|webp)`,
-      watch: `${srcFolder}/images/**/*.+(png|jpg|gif|ico|svg|webp)`
+      public: `${_serve}/images/`,
+      src: `${_src}/images/**/*.+(png|jpg|gif|ico|webp)`,
+      watch: `${_src}/images/**/*.+(png|jpg|gif|ico|svg|webp)`
    },
    svg: {
-      public: `${buildFolder}/images/`,
-      src: `${srcFolder}/images/icons/**/*.svg`,
-      watch: `${srcFolder}/images/icons/**/*.svg`
+      public: `${_serve}/images/`,
+      src: `${_src}/images/icons/**/*.svg`,
+      watch: `${_src}/images/icons/**/*.svg`
    },
    fonts: {
-      build: 'build/fonts',
-      public: `public/fonts`,
-      src: `src/fonts`,
-      watch: `src/fonts/**/*.ttf`
+      build: `${_build}/fonts`,
+      public: `${_serve}/fonts`,
+      src: `${_src}/fonts`,
+      watch: `${_src}/fonts/**/*.ttf`
    }
 };
 
-export { path, srcFolder, buildFolder };
+export { path, _src, _serve, _build };

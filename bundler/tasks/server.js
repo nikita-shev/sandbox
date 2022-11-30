@@ -1,10 +1,10 @@
-import { buildFolder } from '../settings.js';
+import { _serve as folder } from '../settings.js';
 import browserSync from 'browser-sync';
 
 const startServer = () => {
    browserSync.init({
       server: {
-         baseDir: `./${buildFolder}/`
+         baseDir: `./${folder}/`
       },
       notify: false
    });
