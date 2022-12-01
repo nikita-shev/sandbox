@@ -20,7 +20,7 @@ class JavaScript {
          .pipe(browserSync.stream());
    }
 
-   buildJs() {
+   buildJavaScriptFiles() {
       return src(js.src)
          .pipe(webpack(webpackConfig))
          .pipe(rename({ suffix: '.min' }))
