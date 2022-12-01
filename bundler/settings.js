@@ -2,6 +2,7 @@ const { _src, _serve, _build } = { _src: 'src', _serve: 'public', _build: 'build
 
 const path = {
    html: {
+      build: `${_build}/`,
       public: `${_serve}/`,
       src: [`${_src}/**/*.html`, `!${_src}/**/_*.html`],
       watch: `${_src}/**/*.html`

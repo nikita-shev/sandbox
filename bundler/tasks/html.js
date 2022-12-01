@@ -8,7 +8,9 @@ const { src, dest } = gulp;
 const { html } = path;
 
 const configureHtmlFiles = () => {
-   return src(html.src).pipe(fileInclude()).pipe(dest(html.public)).pipe(browserSync.stream());
+   const folder = process.env.NODE_ENV === 'development' ? html.public : html.build;
+
+   return src(html.src).pipe(fileInclude()).pipe(dest(folder)).pipe(browserSync.stream());
 };
 
 export default configureHtmlFiles;
