@@ -7,6 +7,7 @@ const path = {
       watch: `${_src}/**/*.html`
    },
    css: {
+      build: `${_build}/css/`,
       public: `${_serve}/css/`,
       src: `${_src}/styles/main.sass`,
       watch: `${_src}/styles/**/*.+(scss|sass)`
