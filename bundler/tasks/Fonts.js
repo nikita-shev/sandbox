@@ -1,4 +1,4 @@
-import { path } from '../settings.js';
+import { path, _src } from '../settings.js';
 
 import fs from 'fs';
 import gulp from 'gulp';
@@ -72,7 +72,7 @@ class Fonts {
    }
 
    setFontFaceMixin(cb) {
-      const path = 'src/styles/mixins/parts/_fonts.sass';
+      const path = `${_src}/styles/mixins/parts/_fonts.sass`;
       const files = fs.readdirSync(fonts.src).map((file) => file.split('.')[0]);
 
       fs.writeFileSync(path, '');
