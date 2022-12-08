@@ -17,7 +17,7 @@ const path = {
       build: `${_build}/js/`,
       public: `${_serve}/js/`,
       src: `${_src}/js/main.js`,
-      watch: `${_src}/js/**/*.js`
+      watch: `${_src}/js/**/*.+(js|ts)`
    },
    images: {
       public: `${_serve}/images/`,
