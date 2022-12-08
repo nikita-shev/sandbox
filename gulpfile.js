@@ -11,9 +11,9 @@ import { convertTtf2Woff, convertTtf2Woff2, setFontFaceMixin } from './bundler/t
 
 const { html: HTML, css: CSS, js: JS, fonts: FONTS, images: IMAGES, svg: SVG } = path;
 const { series, parallel, watch } = gulp;
-const { configureHtmlFiles } = html;
-const { configureStyleFiles } = styles;
-const { configureJsFiles } = js;
+const { configureHtmlFiles, buildHtmlFiles } = html;
+const { configureStyleFiles, buildStyleFiles } = styles;
+const { configureJsFiles, buildJavaScriptFiles } = js;
 const { convertToWebp, optimizeImages, createSvgSprite } = images;
 
 const watchFiles = () => {
@@ -24,6 +24,21 @@ const watchFiles = () => {
    watch(IMAGES.watch, parallel(convertToWebp, optimizeImages));
    watch(SVG.watch, createSvgSprite);
 };
+
+export const build = series(
+   deleteFiles,
+   parallel(
+      buildHtmlFiles,
+      buildStyleFiles,
+      buildJavaScriptFiles,
+      convertToWebp,
+      optimizeImages,
+      createSvgSprite,
+      convertTtf2Woff,
+      convertTtf2Woff2,
+      setFontFaceMixin
+   )
+);
 
 export default series(
    deleteFiles,
