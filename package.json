@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NikitaShevchenkoWeb/sandbox.git"
+    "url": "git+https://github.com/nikita-shev/sandbox.git"
   },
   "author": "Nikita Shevchenko",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/NikitaShevchenkoWeb/sandbox/issues"
+    "url": "https://github.com/nikita-shev/sandbox/issues"
   },
-  "homepage": "https://github.com/NikitaShevchenkoWeb/sandbox#readme",
+  "homepage": "https://github.com/nikita-shev/sandbox#readme",
   "browserslist": [
     "defaults"
   ],
