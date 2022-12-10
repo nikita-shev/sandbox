@@ -12,7 +12,7 @@ const { html } = path;
 class HTML {
    static compileFiles() {
       return src(html.src)
-         .pipe(fileInclude())
+         .pipe(fileInclude({ basepath: process.cwd() }))
          .pipe(htmlValidator.analyzer())
          .pipe(htmlValidator.reporter());
    }
