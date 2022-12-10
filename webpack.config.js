@@ -11,6 +11,7 @@ export default {
    output: {
       filename: 'main.js'
    },
+   devtool: !isProd ? 'source-map' : false,
    module: {
       rules: [
          {
