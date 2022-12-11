@@ -1,0 +1,15 @@
+@mixin container($max-width, $width)
+  @media (max-width: $max-width)
+    .container
+      width: $width
+
+.container
+  width: 1170px
+  margin: 0 auto
+
+@include container(1200px, 960px)
+@include container(992px, 720px)
+@include container(768px, 540px)
+@include container(576px, 420px)
+@include container(450px, 290px)
+@include container(320px, 290px)
