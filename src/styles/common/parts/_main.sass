@@ -1,0 +1,33 @@
+*,  *:before, *:after
+  @include font-styles(100%, 400) // size, weight, family
+  color: var(--text-primary)
+  box-sizing: border-box
+
+*:focus-visible
+  outline-offset: 1px
+  outline: 2px solid darken(#000000, 15%)
+
+h1, h2, h3, h4, h5, h6, p
+  margin: 0
+  padding: 0
+
+ul
+  margin: 0
+  padding: 0
+  list-style-type: none
+
+a
+  text-decoration: none
+
+img
+  max-width: 100%
+
+.visually-hidden
+  position: absolute
+  width: 1px
+  height: 1px
+  margin: -1px
+  padding: 0
+  border: 0
+  clip: rect(0 0 0 0)
+  overflow: hidden
