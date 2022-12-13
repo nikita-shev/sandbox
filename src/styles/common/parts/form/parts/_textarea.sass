@@ -1,0 +1,17 @@
+.textarea-wrap
+  position: relative
+
+.textarea
+  @include font-styles(14px, 300)
+  border: 1px solid #ffffff
+  color: var(--text-primary)
+  resize: none
+  // &:focus
+  //   border: 1px solid var(--bg-primary)
+  //   outline: none
+  &::-webkit-scrollbar
+    width: 5px
+    background-color: #ffffff
+  &::-webkit-scrollbar-thumb
+    border-radius: 10px
+    background-color: rgba(159, 159, 159, 0.5)
